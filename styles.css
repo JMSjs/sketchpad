@@ -8,6 +8,7 @@ body {
     flex-direction: column-reverse;
     margin: 10px;
 }
+
 .container {
     text-align: center;
 }
@@ -19,4 +20,11 @@ body {
     width: 800px;
     height: 800px;
     border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hovered {
+    background-color: black;
 }
