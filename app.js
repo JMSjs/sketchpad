@@ -1,6 +1,7 @@
 const canvas = document.querySelector('.canvas');
 const btn = document.querySelector('.btn');
-const toggler = document.querySelector('.toggler');
+const reset = document.querySelector('.reset');
+// const toggler = document.querySelector('.toggler');
 let canvasPixelLength = 800;
 let cellPixelLength = 10;
 let cellCount = 6400;
@@ -36,3 +37,4 @@ function changeGridSize() {
 
 resetGrid(); //build default grid based on default cell values
 btn.addEventListener("click", changeGridSize); //listen for user button press to change size
+reset.addEventListener("click", resetGrid); //listen for user button press to reset.
