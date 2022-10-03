@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 10px;
+}
+.container {
+    text-align: center;
+}
+
+.canvas {
+    box-sizing: content-box;
+    margin: 10px auto;
+    padding: auto;
+    width: 800px;
+    height: 800px;
+    border: 2px solid black;
+}
