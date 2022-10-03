@@ -1,9 +1,10 @@
 const canvas = document.querySelector('.canvas');
 const btn = document.querySelector('.btn');
+const toggler = document.querySelector('.toggler');
 let canvasPixelLength = 800;
 let cellPixelLength = 10;
 let cellCount = 6400;
-let r = 0;
+let r = 0; //for controlling RGB color fills later
 let g = 0;
 let b = 0;
 
@@ -26,8 +27,8 @@ function resetGrid() {
 }
 
 function changeGridSize() {
-    let userInput = parseInt(prompt('How many cells per row?'));
-    while (!userInput) {userInput = parseInt(prompt('Not a valid number. How many cells per row?')); }
+    let userInput = parseInt(prompt('How many cells per row? (Max: 125 cells)'));
+    while (!userInput || userInput > 125) {userInput = parseInt(prompt('Not valid. How many cells per row? (Max: 125 cells)')); }
     cellPixelLength = canvasPixelLength / userInput;
     cellCount = userInput*userInput;
     resetGrid(); //builds the grid based on user parameters
